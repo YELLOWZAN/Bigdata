@@ -70,6 +70,21 @@ def down_load(content):
         time.sleep(2)
         select_info = etree.HTML(page_response.text)
         try:
+            # 房屋户型A //*[@id="scrollto-1"]/div[2]/ul/li[1]/div[2]
+            # 所在楼层B //*[@id="scrollto-1"]/div[2]/ul/li[2]/div[2]
+            # 建筑面积C //*[@id="scrollto-1"]/div[2]/ul/li[3]/div[2]
+            # 户型结构D //*[@id="scrollto-1"]/div[2]/ul/li[4]/div[2]
+            # 房屋朝向E //*[@id="scrollto-1"]/div[2]/ul/li[5]/div[2]
+            # 装修情况F //*[@id="scrollto-1"]/div[2]/ul/li[6]/div[2]
+            # 配备电梯G //*[@id="scrollto-1"]/div[2]/ul/li[7]/div[2]
+            # 房屋用途H //*[@id="scrollto-1"]/div[3]/ul/li[1]/div[2]
+            # 上次交易I //*[@id="scrollto-1"]/div[3]/ul/li[2]/div[2]
+            # 房屋年限J //*[@id="scrollto-1"]/div[3]/ul/li[3]/div[2]
+            # 建筑年代K //*[@id="scrollto-1"]/div[3]/ul/li[4]/div[2]
+            # 抵押信息L //*[@id="scrollto-1"]/div[3]/ul/li[5]/div[2]
+            # 房本备件M //*[@id="scrollto-1"]/div[3]/ul/li[6]/div[2]
+            # 挂牌时间N //*[@id="scrollto-1"]/div[3]/ul/li[7]/div[2]
+            # 房源编码O //*[@id="scrollto-1"]/div[3]/ul/li[8]/div[2]
             A = select_info.xpath('//*[@id="scrollto-1"]/div[2]/ul/li[1]/div[2]/text()')[0]
             B = select_info.xpath('//*[@id="scrollto-1"]/div[2]/ul/li[2]/div[2]/text()')[0]
             C = select_info.xpath('//*[@id="scrollto-1"]/div[2]/ul/li[3]/div[2]/text()')[0]
